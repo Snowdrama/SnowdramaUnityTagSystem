@@ -13,8 +13,8 @@
   "type": "utility",
   "samples": [
     {
-      "displayName": "Spring Example",
-      "description": "Contains an example for several springs and comparisons betwen mass friction and tension",
+      "displayName": "Tag System Example",
+      "description": "Contains an example of a basic use of the tag system",
       "path": "Samples~/TagSystemExample"
     }
   ]
