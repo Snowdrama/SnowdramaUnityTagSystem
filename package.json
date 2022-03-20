@@ -1,8 +1,8 @@
 {
-  "name": "com.snowdrama.ui_router",
+  "name": "com.snowdrama.tag_system",
   "version": "0.1.0",
-  "description": "My Simple UI router tools for making basic menus",
-  "displayName": "Snowdrama UI Router Tools",
+  "description": "A tagging system that manages lists of objects that share tags",
+  "displayName": "Snowdrama Tag System",
   "unity": "2019.1",
   "author": {
     "name": "John 'Snowdrama' Close",
@@ -11,5 +11,11 @@
   },
   "dependencies": {},
   "type": "utility",
-  "samples": []
+  "samples": [
+    {
+      "displayName": "Spring Example",
+      "description": "Contains an example for several springs and comparisons betwen mass friction and tension",
+      "path": "Samples~/TagSystemExample"
+    }
+  ]
 }
