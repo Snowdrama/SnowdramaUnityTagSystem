@@ -22,12 +22,21 @@ namespace Snowdrama.TagSystem
                 TagObjects.UnregisterTaggedObject(item, this.gameObject);
             }
         }
-
+        /// <summary>
+        /// Tag an object with a specific tag 
+        /// NOTE: tags are case sensitive!
+        /// </summary>
+        /// <param name="tag"></param>
         public void TagObject(string tag)
         {
             TagObjects.RegisterTaggedObject(tag, this.gameObject);
         }
 
+        /// <summary>
+        /// Untag an object with a specific tag 
+        /// NOTE: tags are case sensitive!
+        /// </summary>
+        /// <param name="tag"></param>
         public void UntagObject(string tag)
         {
             TagObjects.UnregisterTaggedObject(tag, this.gameObject);
