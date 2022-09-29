@@ -13,7 +13,8 @@ public class TagObjects
         {
             return taggedObjects[tag];
         }
-        return null;
+        taggedObjects.Add(tag, new List<GameObject>());
+        return taggedObjects[tag];
     }
 
     public static void RegisterTaggedObject(string tag, GameObject go)
@@ -29,6 +30,10 @@ public class TagObjects
             {
                 taggedObjects[tag].Add(go);
             }
+            else
+            {
+                Debug.LogErrorFormat("Object {0} is already tagged with {1}", go.name, tag);
+            }
         }
     }
 
@@ -41,6 +46,14 @@ public class TagObjects
             {
                 taggedObjects[tag].Remove(go);
             }
+            else
+            {
+                Debug.LogErrorFormat("Object {0} isn't tagged with tag {1}", go.name, tag);
+            }
+        }
+        else
+        {
+            Debug.LogErrorFormat("Tag {0} doesn't exist in the dictionary", tag);
         }
     }
 

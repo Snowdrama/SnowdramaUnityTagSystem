@@ -12,7 +12,6 @@ namespace Snowdrama.TagSystem
         {
             foreach (var item in tags)
             {
-                Debug.LogWarningFormat("Setting {0} with Tag {1}", this.gameObject.name, item);
                 TagObjects.RegisterTaggedObject(item, this.gameObject);
             }
         }
@@ -20,9 +19,18 @@ namespace Snowdrama.TagSystem
         {
             foreach (var item in tags)
             {
-                Debug.LogWarningFormat("Clearing {0} with Tag {1}", this.gameObject.name, item);
                 TagObjects.UnregisterTaggedObject(item, this.gameObject);
             }
+        }
+
+        public void TagObject(string tag)
+        {
+            TagObjects.RegisterTaggedObject(tag, this.gameObject);
+        }
+
+        public void UntagObject(string tag)
+        {
+            TagObjects.UnregisterTaggedObject(tag, this.gameObject);
         }
     }
 }
